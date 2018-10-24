@@ -185,7 +185,7 @@ def VirusTotalSearch(filename, options):
         print('No searchterms in file %s' % filename)
         return
 
-    headers = ('Search Term', 'Response', 'Scan Date', 'Detections', 'Total', 'Permalink', 'AVs')
+    headers = ('md5', 'response', 'scan_date', 'detections', 'total', 'permalink', 'avs')
     if options.comment:
         headers = InsertIntoTuple(headers, 1, 'Comment')
     oLogger = CSVLogger('virustotal-search', headers)
